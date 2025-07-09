@@ -10,7 +10,7 @@ const units = {
   }
 };
 
-function TemperatureConverter() {
+function LengthConverter() {
   const [category] = useState('length');
   const [fromUnit, setFromUnit] = useState('meter');
   const [toUnit, setToUnit] = useState('kilometer');
@@ -46,4 +46,4 @@ function TemperatureConverter() {
   );
 }
 
-export default TemperatureConverter;
+export default LengthConverter;
