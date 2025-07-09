@@ -1,11 +1,11 @@
 import './App.css'
-import Converter from "./components/Converter";
+import ConverterTabs from "./components/ConverterTabs";
 
 function App() {
   return (
     <div>
       <h1>Unit Converter</h1>
-      <Converter />
+      <ConverterTabs />
     </div>
   )
 }

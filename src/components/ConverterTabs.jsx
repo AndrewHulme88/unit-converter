@@ -10,7 +10,7 @@ const units = {
   }
 };
 
-function Converter() {
+function ConverterTabs() {
   const [category] = useState('length');
   const [fromUnit, setFromUnit] = useState('meter');
   const [toUnit, setToUnit] = useState('kilometer');
@@ -46,4 +46,4 @@ function Converter() {
   );
 }
 
-export default Converter;
+export default ConverterTabs;
