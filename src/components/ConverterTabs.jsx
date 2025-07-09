@@ -1,6 +1,6 @@
 import { useState } from "react";
 import LengthConverter from "./LengthConverter";
-
+import TemperatureConverter from "./TemperatureConverter";
 
 const tabs = [ 'Length', 'Temperature'];
 
@@ -22,7 +22,9 @@ function ConverterTabs() {
       </div>
 
       {activeTab === 'Length' && <LengthConverter />}
-      {/* {activeTab === 'Temperature' && <TemperatureConverter />} */}
+      {activeTab === 'Temperature' && <TemperatureConverter />}
     </div>
   )
 }
+
+export default ConverterTabs;
