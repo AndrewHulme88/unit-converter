@@ -10,15 +10,19 @@ function ConverterTabs() {
 
   return (
     <div>
-      <div>
+      <div className="flex space-x-2 mb-4">
         {tabs.map(tab => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            style={{marginRight: '1rem', fontWeight: activeTab === tab ? 'bold' : 'normal'}}
-            >
-              {tab}
-            </button>
+            className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+              activeTab === tab
+                ? 'bg-blue-600 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {tab}
+          </button>
         ))}
       </div>
 
