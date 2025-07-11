@@ -11,9 +11,9 @@ function ConverterTabs() {
 
   return (
     <div className="relative">
-      {/* Scrollable tab row */}
-      <div className="overflow-x-auto max-w-full">
-        <div className="flex gap-2 border-b mb-6 w-max min-w-full">
+      {/* Floating, scrollable tab bar with negative top margin */}
+      <div className="-mt-6 mb-0 overflow-x-auto max-w-full px-1">
+        <div className="flex gap-2 w-max min-w-full">
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -30,7 +30,7 @@ function ConverterTabs() {
         </div>
       </div>
 
-      {/* Converter panel */}
+      {/* Panel below tabs */}
       <div className="pt-6 bg-white rounded-xl shadow-lg p-8">
         {activeTab === 'Length' && <LengthConverter />}
         {activeTab === 'Temperature' && <TemperatureConverter />}
