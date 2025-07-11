@@ -11,7 +11,7 @@ function App() {
           Unit Converter
         </h1>
         <p className="text-gray-600 text-base mt-2">
-          Convert length, weight, and temperature — fast and simple.
+          Convert units fast and simple.
         </p>
       </div>
 
