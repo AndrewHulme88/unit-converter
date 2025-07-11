@@ -2,8 +2,10 @@ import { useState } from 'react';
 import LengthConverter from './LengthConverter';
 import TemperatureConverter from './TemperatureConverter';
 import WeightConverter from './WeightConverter';
+import VolumeConverter from './VolumeConverter';
 
-const tabs = ['Length', 'Temperature', 'Weight'];
+
+const tabs = ['Length', 'Temperature', 'Weight', 'Volume'];
 
 function ConverterTabs() {
   const [activeTab, setActiveTab] = useState('Length');
@@ -32,6 +34,7 @@ function ConverterTabs() {
         {activeTab === 'Length' && <LengthConverter />}
         {activeTab === 'Temperature' && <TemperatureConverter />}
         {activeTab === 'Weight' && <WeightConverter />}
+        {activeTab === 'Volume' && <VolumeConverter />}
       </div>
     </div>
   );
