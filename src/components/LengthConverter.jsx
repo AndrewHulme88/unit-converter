@@ -8,6 +8,15 @@ const units = {
   mile: 0.000621371,
 };
 
+const unitLabels = {
+  meter: ['meter', 'meters'],
+  kilometer: ['kilometer', 'kilometers'],
+  inch: ['inch', 'inches'],
+  foot: ['foot', 'feet'],
+  mile: ['mile', 'miles'],
+};
+
+
 function LengthConverter() {
   const [from, setFrom] = useState('meter');
   const [to, setTo] = useState('kilometer');
@@ -21,7 +30,7 @@ function LengthConverter() {
       return;
     }
     const converted = num * (units[to] / units[from]);
-    setResult(converted.toFixed(4));
+    setResult(parseFloat(converted.toFixed(4)).toString());
   };
 
   return (
@@ -67,7 +76,14 @@ function LengthConverter() {
       </button>
 
       <div className="h-10 flex items-center justify-center mt-4 text-lg font-semibold text-gray-800">
-        {result !== null ? `Result: ${result}` : ''}
+        {result !== null && (
+          <>
+            Result: {result}{' '}
+            {parseFloat(result) === 1
+              ? unitLabels[to][0]
+              : unitLabels[to][1]}
+          </>
+        )}
       </div>
     </div>
   );
