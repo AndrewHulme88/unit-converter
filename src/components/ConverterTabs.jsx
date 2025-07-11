@@ -4,8 +4,9 @@ import TemperatureConverter from './TemperatureConverter';
 import WeightConverter from './WeightConverter';
 import VolumeConverter from './VolumeConverter';
 import AreaConverter from './AreaConverter';
+import SpeedConverter from './SpeedConverter';
 
-const tabs = ['Length', 'Temperature', 'Weight', 'Volume', 'Area'];
+const tabs = ['Length', 'Temperature', 'Weight', 'Volume', 'Area', 'Speed'];
 
 function ConverterTabs() {
   const [activeTab, setActiveTab] = useState('Length');
@@ -36,6 +37,7 @@ function ConverterTabs() {
         {activeTab === 'Weight' && <WeightConverter />}
         {activeTab === 'Volume' && <VolumeConverter />}
         {activeTab === 'Area' && <AreaConverter />}
+        {activeTab === 'Speed' && <SpeedConverter />}
       </div>
     </div>
   );
